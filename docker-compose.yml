@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  web:
+    image: node:23-alpine3.20
+    ports:
+      - "3013:3013"
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: node server.js
